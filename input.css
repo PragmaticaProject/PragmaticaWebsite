@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background-image: url('../resources/bg-tablet-pattern.svg');
+    background-repeat: no-repeat;
+    background-size: 800px;
+    background-position: 150% -15%;
+}
+
+#testimonials {
+    background-image: url('../resources/bg-tablet-pattern.svg');
+    background-repeat: no-repeat;
+    background-size: 400px;
+    background-position: 85% 25%;
+}
+
+@media (max-width: 576px) {
+    body {
+        background-position: 250px -50px;
+        background-size: 500px;
+    }
+}
