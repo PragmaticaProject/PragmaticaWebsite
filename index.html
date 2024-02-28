@@ -10,7 +10,7 @@
     <!-- Navbar -->
     <nav class="relative container mx-auto py-6">
         <!-- Flex Container -->
-        <div class="flex flex-col md:flex-row items-center justify-between space-y-3 md:space-y-0">
+        <div class="flex flex-col md:flex-row items-center justify-between space-y-3">
             <!-- Logo -->
             <div class="pt-2">
                 <img class="h-16 md:h-20" src="resources/Banner Small No Background.png" alt="">
@@ -19,6 +19,7 @@
             <div class="md:flex space-x-3 text-center line-clamp-1">
                 <a href="index.html" class="hover:text-pragColor text-xl">Home</a>
                 <a href="howitworks.html" class="hover:text-pragColor text-xl">How it Works</a>
+                <a href="getstarted.html" class="hover:text-pragColor text-xl">Get Started</a>
                 <a href="ourteam.html" class="hover:text-pragColor text-xl">Our Team</a>
                 <a href="research.html" class="hover:text-pragColor text-xl">Research</a>
                 <a href="https://calendly.com/karthikprasad62/pragmatica-meeting" class="hover:text-pragColor text-xl">Contact Us</a>
@@ -27,6 +28,48 @@
             <a href="https://dashboard-ruby-six.vercel.app/" class="p-3 px-6 pt-2 text-white bg-pragColor text-xl rounded-full baseline hover:bg-gray-500">Dashboard</a>
         </div>
     </nav>
+
+    <!--Experimental Navbar
+    <nav class="bg-pragColor fixed w-full z-20 top-0 start-0 border-b shadow-xl">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a href="https://pragmatica.ca/" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <img src="resources/Logo Inverted.png" class="h-12" alt="Pragmatica Banner">
+            <h1 class="text-center text-2xl text-white whitespace-nowrap">Pragmatica</h1>
+        </a>
+        <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+            <a href="https://dashboard-ruby-six.vercel.app/" class="p-3 px-6 pt-2 text-white bg-pragColor text-xl rounded-full baseline hover:bg-gray-500">Dashboard</a>
+            <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
+              <span class="sr-only">Open main menu</span>
+              <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                  <path stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+              </svg>
+          </button>
+        </div>
+        <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+          <ul class="flex flex-col text-white p-4 md:p-0 mt-4 font-medium border rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
+            <li>
+                <a href="index.html" class="hover:text-gray-200 text-xl">Home</a>
+            </li>
+            <li>
+                <a href="howitworks.html" class="hover:text-gray-200 text-xl">How it Works</a>
+            </li>
+            <li>
+                <a href="getstarted.html" class="hover:text-gray-200 text-xl">Get Started</a>
+            </li>
+            <li>
+                <a href="ourteam.html" class="hover:text-gray-200 text-xl">Our Team</a>
+            </li>
+            <li>
+                <a href="research.html" class="hover:text-gray-200 text-xl">Research</a>
+            </li>
+            <li>
+                <a href="https://calendly.com/karthikprasad62/pragmatica-meeting" class="hover:text-gray-200 text-xl">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+        </div>
+    </nav>
+    -->
 
     <!-- Hero Section -->
     <section id="hero">
@@ -57,7 +100,7 @@
     </section>
 
     <!-- Get the help you need -->
-    <section class="gethelp">
+    <section id="gethelp">
         <div class="flex flex-col md:flex-row mx-auto items-center justify-around px-24 space-y-12 md:space-y-0 py-12">
             <div class="flex flex-col space-y-12 md:w-1/3">
                 <div class="font-bold text-center space-y-6">
@@ -80,11 +123,11 @@
             <div class="flex flex-col md:flex-row items-center mx-auto space-x-0 md:space-x-24 space-y-12 md:space-y-0">
                 <div class="flex flex-col w-1/2 py-8 px-4 text-white space-y-8">
                     <h1 class="text-2xl font-bold">Compared to traditional therapy, Pragmatica offers:</h1>
-                    <ul class="text-lg space-y-6">
-                        <li>- Practice your communication skills in a safe, meaningful, 3D environment</li>
-                        <li>- Professionally curated and tailor made activities to help you meet your goals</li>
-                        <li>- Increase the intensity of your practice beyond your therapy session</li>
-                        <li>- Learn at your own pace with tips and feedback to help you along the way</li>
+                    <ul class="text-lg space-y-6 list-disc">
+                        <li>Professionally curated and tailor made activities to help you meet your goals</li>
+                        <li>Practice your communication skills in a safe, meaningful, 3D environment</li>
+                        <li>Increase the intensity of your practice beyond your therapy session</li>
+                        <li>Learn at your own pace with tips and feedback to help you along the way</li>
                     </ul>
                 </div>
                 <div class="flex flex-col w-1/2 py-8 px-4 space-y-6">
@@ -97,7 +140,7 @@
     </section>
 
     <!-- Video Section -->
-    <section id="youtube-video" class="bg-pragColor text-white text-center py-16 space-y-6">
+    <section id="youtube-video" class="bg-pragColor text-white text-center p-12 space-y-6">
         <h2 class="text-4xl font-bold">Watch Our Demo</h2>
         <div class="flex justify-center">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/NIYWhD4ZRl8?si=59ReVjVlMNzQyBq9" title="Pragmatica Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
