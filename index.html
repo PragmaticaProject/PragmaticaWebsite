@@ -8,72 +8,43 @@
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="relative container mx-auto py-6">
-        <!-- Flex Container -->
-        <div class="flex flex-col md:flex-row items-center justify-between space-y-3">
-            <!-- Logo -->
-            <div class="pt-2">
-                <img class="h-16 md:h-20" src="resources/Banner Small No Background.png" alt="">
-            </div>
-            <!-- Menu Items -->
-            <div class="md:flex space-x-3 text-center line-clamp-1">
-                <a href="index.html" class="hover:text-pragColor text-xl">Home</a>
-                <a href="howitworks.html" class="hover:text-pragColor text-xl">How it Works</a>
-                <a href="getstarted.html" class="hover:text-pragColor text-xl">Get Started</a>
-                <a href="ourteam.html" class="hover:text-pragColor text-xl">Our Team</a>
-                <a href="research.html" class="hover:text-pragColor text-xl">Research</a>
-                <a href="https://calendly.com/karthikprasad62/pragmatica-meeting" class="hover:text-pragColor text-xl">Contact Us</a>
-            </div>
-            <!-- Button -->
-            <a href="https://dashboard-ruby-six.vercel.app/" class="p-3 px-6 pt-2 text-white bg-pragColor text-xl rounded-full baseline hover:bg-gray-500">Dashboard</a>
-        </div>
-    </nav>
-
-    <!--Experimental Navbar
-    <nav class="bg-pragColor fixed w-full z-20 top-0 start-0 border-b shadow-xl">
+    <nav class="bg-pragColor fixed w-full z-20 top-0 start-0 shadow-xl">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="https://pragmatica.ca/" class="flex items-center space-x-3 rtl:space-x-reverse">
-            <img src="resources/Logo Inverted.png" class="h-12" alt="Pragmatica Banner">
-            <h1 class="text-center text-2xl text-white whitespace-nowrap">Pragmatica</h1>
-        </a>
-        <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-            <a href="https://dashboard-ruby-six.vercel.app/" class="p-3 px-6 pt-2 text-white bg-pragColor text-xl rounded-full baseline hover:bg-gray-500">Dashboard</a>
-            <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
-              <span class="sr-only">Open main menu</span>
-              <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                  <path stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-              </svg>
-          </button>
+            <a href="https://pragmatica.ca/" class="flex items-center space-x-3">
+                <img src="resources/Logo Inverted.png" class="h-12" alt="Pragmatica Banner">
+                <h1 class="text-center text-2xl text-white">Pragmatica</h1>
+            </a>
+            <div class="flex md:order-2 space-x-3 md:space-x-0">
+                <a href="https://dashboard-ruby-six.vercel.app/" class="p-3 px-6 pt-2 text-white bg-pragColor text-xl font-bold rounded-full baseline hover:bg-gray-800">Dashboard</a>
+            </div>
+            <div class="items-center justify-between w-full hidden md:flex md:w-auto" id="navbar-sticky">
+            <ul id="nav-menu" class="flex flex-col text-white p-4 md:p-0 mt-4 font-medium rounded-lg md:space-x-8 md:flex-row md:mt-0">
+                <li>
+                    <a href="index.html" class="hover:text-gray-800 text-xl border-r border-white pr-5">Home</a>
+                </li>
+                <li>
+                    <a href="howitworks.html" class="hover:text-gray-800 text-xl border-r border-white pr-5">How it Works</a>
+                </li>
+                <li>
+                    <a href="getstarted.html" class="hover:text-gray-800 text-xl border-r border-white pr-5">Get Started</a>
+                </li>
+                <li>
+                    <a href="ourteam.html" class="hover:text-gray-800 text-xl border-r border-white pr-5">Our Team</a>
+                </li>
+                <li>
+                    <a href="research.html" class="hover:text-gray-800 text-xl border-r border-white pr-5">Research</a>
+                </li>
+                <li>
+                    <a href="https://calendly.com/karthikprasad62/pragmatica-meeting" class="hover:text-gray-800 text-xl">Contact Us</a>
+                </li>
+            </ul>
+            </div>
         </div>
-        <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-          <ul class="flex flex-col text-white p-4 md:p-0 mt-4 font-medium border rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
-            <li>
-                <a href="index.html" class="hover:text-gray-200 text-xl">Home</a>
-            </li>
-            <li>
-                <a href="howitworks.html" class="hover:text-gray-200 text-xl">How it Works</a>
-            </li>
-            <li>
-                <a href="getstarted.html" class="hover:text-gray-200 text-xl">Get Started</a>
-            </li>
-            <li>
-                <a href="ourteam.html" class="hover:text-gray-200 text-xl">Our Team</a>
-            </li>
-            <li>
-                <a href="research.html" class="hover:text-gray-200 text-xl">Research</a>
-            </li>
-            <li>
-                <a href="https://calendly.com/karthikprasad62/pragmatica-meeting" class="hover:text-gray-200 text-xl">Contact Us</a>
-            </li>
-          </ul>
-        </div>
-        </div>
-    </nav>
-    -->
+    </nav>    
 
     <!-- Hero Section -->
     <section id="hero">
-        <div class="flex flex-col md:flex-row items-center mx-auto mt-10 px-32 space-x-0 md:space-x-32 space-y-12 md:space-y-0">
+        <div class="flex flex-col md:flex-row items-center mx-auto px-32 pt-24 space-x-0 md:space-x-32 space-y-12 md:space-y-0">
             <div class="flex flex-col mb-2 space-y-12 md:w-1/2">
                 <div class="text-4xl md:text-6xl font-bold text-center">
                     <h1>Virtual Reality Speech and Language Therapy</h1>
@@ -86,7 +57,7 @@
                 </div>
             </div>
             <div class="items-center justify-center md:w-1/2">
-                <img src="resources/vr users.png" alt="">
+                <img src="resources/vr users.png" alt="people using VR">
             </div>
         </div>
         <div class="flex-col items-center mt-12 py-4 bg-pragColor">
@@ -132,7 +103,7 @@
                 </div>
                 <div class="flex flex-col w-1/2 py-8 px-4 space-y-6">
                     <div class="flex mx-auto items-center">
-                        <img src="resources/parent-child-vr.jpg" alt="">
+                        <img src="resources/parent-child-vr.jpg" alt="child using VR">
                     </div>
                 </div>
             </div>
@@ -185,7 +156,7 @@
             </h2>
             <div class="flex flex-col mt-24 space-y-24 md:flex-row md:space-x-6 md:space-y-0">
                 <div class="flex flex-col items-center mt-24 md:mt-0 px-6 py-12 space-y-3 rounded-lg shadow-xl bg-pragColor md:w-1/2">
-                    <img src="resources/Karthik.jpg" class="w-32 mx-auto -mt-20 rounded-full" alt="">
+                    <img src="resources/Karthik.jpg" class="w-32 mx-auto -mt-20 rounded-full" alt="Karthik Prasad picture">
                     <h5 class="text-xl font-bold text-white">Karthik Prasad</h5>
                     <h5 class="text-lg text-white">CEO</h5>
                     <p class="text-lg text-white">
@@ -193,7 +164,7 @@
                     </p>
                 </div>
                 <div class="flex flex-col items-center mt-24 md:mt-0 px-6 py-12 space-y-3 rounded-lg shadow-xl bg-pragColor md:w-1/2">
-                    <img src="resources/Thomas.png" class="w-32 mx-auto -mt-20 rounded-full" alt="">
+                    <img src="resources/Thomas.png" class="w-32 mx-auto -mt-20 rounded-full" alt="Thomas Mastantuono picture">
                     <h5 class="text-xl font-bold text-white">Thomas Mastantuono</h5>
                     <h5 class="text-lg text-white">CTO</h5>
                     <p class="text-lg text-white">
@@ -201,7 +172,7 @@
                     </p>
                 </div>
                 <div class="flex flex-col items-center mt-24 md:mt-0 px-6 py-12 space-y-3 rounded-lg shadow-xl bg-pragColor md:w-1/2">
-                    <img src="resources/shawna.jpg" class="w-32 mx-auto -mt-20 rounded-full" alt="">
+                    <img src="resources/shawna.jpg" class="w-32 mx-auto -mt-20 rounded-full" alt="Shawna Fleming picture">
                     <h5 class="text-xl font-bold text-white">Shawna Fleming</h5>
                     <h5 class="text-lg text-white">Clinical Advisor</h5>
                     <p class="text-lg text-white">
@@ -209,7 +180,7 @@
                     </p>
                 </div>
                 <div class="flex flex-col items-center mt-24 md:mt-0 px-6 py-12 space-y-3 rounded-lg shadow-xl bg-pragColor md:w-1/2">
-                    <img src="resources/brittany.jpg" class="w-32 mx-auto -mt-20 rounded-full" alt="">
+                    <img src="resources/brittany.jpg" class="w-32 mx-auto -mt-20 rounded-full" alt="Brittany Clark picture">
                     <h5 class="text-xl font-bold text-white">Brittany Clark</h5>
                     <h5 class="text-lg text-white">Clinical Advisor</h5>
                     <p class="text-lg text-white">
