@@ -17,6 +17,46 @@
   gtag('config', 'G-Y923W4FG30');
 </script>
 
+<!-- Event snippet for Monthly License Purchase conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+    function gtag_report_conversion_monthly(url) {
+    var callback = function () {
+        if (typeof(url) != 'undefined') {
+        window.location = url;
+        }
+    };
+    gtag('event', 'conversion', {
+        'send_to': 'AW-16517987560/spUACL6kxrQZEOj5scQ9',
+        'value': 150.0,
+        'currency': 'CAD',
+        'transaction_id': '',
+        'event_callback': callback
+    });
+    return false;
+    }
+</script>
+
+<!-- Event snippet for Annual License Purchase conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+    function gtag_report_conversion_annual(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-16517987560/hT_ICMGkxrQZEOj5scQ9',
+          'value': 1200.0,
+          'currency': 'CAD',
+          'transaction_id': '',
+          'event_callback': callback
+      });
+      return false;
+    }
+</script>
+    
 <body>
     <!-- Navbar -->
     <nav class="bg-pragColor fixed w-full shadow-xl">
@@ -103,7 +143,7 @@
                         <li>Unlimited practice time</li>
                         <li>Free data dashboard</li>
                     </ul>
-                    <a href="https://buy.stripe.com/9AQ6oR9FZ7TYfpS4gg" class="bg-pragColor text-white py-2 px-6 rounded-full hover:bg-gray-500">Buy Now</a>
+                    <a href="https://buy.stripe.com/9AQ6oR9FZ7TYfpS4gg" onclick="gtag_report_conversion_monthly()" class="bg-pragColor text-white py-2 px-6 rounded-full hover:bg-gray-500">Buy Now</a>
                 </div>
                 <div class="flex flex-col items-center bg-white shadow-xl rounded-2xl space-y-8 mx-12 py-8 md:w-1/4">
                     <h3 class="text-4xl font-bold">Annually</h3>
@@ -117,7 +157,7 @@
                         <li>Additional activity requests</li>
                         <li>Quick customer support</li>
                     </ul>
-                    <a href="https://buy.stripe.com/5kA6oRcSbeim0uY3ce" class="bg-pragColor text-white py-2 px-6 rounded-full hover:bg-gray-500">Buy Now</a>
+                    <a href="https://buy.stripe.com/5kA6oRcSbeim0uY3ce" onclick="gtag_report_conversion_annual()" class="bg-pragColor text-white py-2 px-6 rounded-full hover:bg-gray-500">Buy Now</a>
                 </div>
                 <div class="flex flex-col items-center bg-white shadow-xl rounded-2xl space-y-8 mx-12 py-8 md:w-1/4">
                     <h3 class="text-4xl font-bold">Enterprise</h3>
@@ -191,5 +231,6 @@
     <!-- Start of HubSpot Embed Code -->
     <script type="text/javascript" id="hs-script-loader" async defer src="//js-na1.hs-scripts.com/45763488.js"></script>
     <!-- End of HubSpot Embed Code -->
+    
 </body>
 </html>
