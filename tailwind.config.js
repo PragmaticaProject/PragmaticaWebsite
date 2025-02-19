@@ -9,6 +9,9 @@ module.exports = {
       xl: '1440px'
     },
     extend: {
+      fontFamily: {
+        hyperlegible: ['Atkinson Hyperlegible', 'sans-serif'],
+      },
       colors: {
         pragColor: '#4DB6AC'
       }

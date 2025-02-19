@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+}
+
 body {
     background-image: url('../resources/bg-tablet-pattern.svg');
     background-repeat: no-repeat;
