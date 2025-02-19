@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Pragmatica - VR Speech and Language Therapy Tool</title>
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y923W4FG30"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y923W4FG30');
+</script>
+
+<body>
+    <!-- Navbar -->
+    <nav class="bg-pragColor fixed w-full shadow-xl">
+        <div class="hidden md:flex items-center justify-between mx-auto py-2 px-12">
+            <div class="flex items-center space-x-3">
+                <h1 class="text-center text-white font-bold text-2xl">Pragmatica</h1>
+            </div>
+            <div class="flex items-center md:space-x-6 text-white md:text-lg font-bold">
+                <div>
+                    <a href="index.html" class="hover:text-gray-800 border-r border-white md:pr-6">Home</a>
+                </div>
+                <div>
+                    <a href="kids.html" class="hover:text-gray-800 border-r border-white md:pr-6">Kids</a>
+                </div>
+                <div>
+                    <a href="adults.html" class="hover:text-gray-800 border-r border-white md:pr-6">Adults</a>
+                </div>
+                <div>
+                    <a href="clinicians.html" class="hover:text-gray-800 border-r border-white md:pr-6">Clinicians</a>
+                </div>
+                <div>
+                    <a href="about.html" class="hover:text-gray-800 md:pr-6">About</a>
+                </div>
+            </div>
+            <div class="flex items-center">
+                <a href="https://dashboard-ruby-six.vercel.app/" class="py-2 px-6 text-white bg-pragColor text-xl font-bold rounded-full baseline hover:bg-gray-800">Dashboard</a>
+            </div>
+        </div>
+        <div class="flex md:hidden justify-center text-white font-bold items-center py-4 px-4">
+            <a href="index.html" class="hover:text-gray-800 px-2">Home</a>
+            <a href="kids.html" class="hover:text-gray-800 px-2">Kids</a>
+            <a href="adults.html" class="hover:text-gray-800 px-2">Adults</a>
+            <a href="clinicians.html" class="hover:text-gray-800 px-2">Clinicians</a>
+            <a href="about.html" class="hover:text-gray-800 px-2">About</a>
+        </div>    
+    </nav>
+    
+    <!-- Kids Hook -->
+    <section id="getstarted">
+        <div class="flex flex-col md:flex-row mx-auto space-y-6 md:space-y-0 items-center justify-around pt-36 pb-12">
+            <div class="flex flex-col space-y-12 px-4 md:px-24 md:w-1/2">
+                <div class="text-center text-4xl font-bold">
+                    <h1>Get your children the help they need now!</h1>
+                </div>
+                <div class="text-center text-2xl">
+                    <h1>Your kids can practice their communication skills from the comfort of their own home.</h1>
+                </div>
+                <div class="flex justify-center">
+                    <a href="https://calendly.com/karthikprasad62/pragmatica-meeting" class="p-3 px-6 pt-2 bg-gray-800 font-bold text-white text-xl rounded-lg baseline hover:bg-gray-500">Book a Free Consultation</a>
+                </div>
+            </div>
+            <div class="flex md:w-1/2">
+                <div class="items-center justify-center border-black border-2 max-w-xl m-4">
+                    <img src="resources/young child using ipad.jpg" alt="kis using Pragmatica on iPad">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Benefits of Pragmatica -->
+    <section class="bg-gray-800">
+        <div class="container flex flex-col items-center mx-auto py-12 space-y-12">
+            <div class="flex flex-col md:flex-row items-center mx-auto space-x-0 md:space-x-24 space-y-12 md:space-y-0">
+                <div class="flex flex-col md:w-1/2 py-4 px-4 space-y-6">
+                    <div class="flex mx-auto items-center">
+                        <img src="resources/girl mom using vr.jpg" alt="child using Pragmatica on VR">
+                    </div>
+                </div>
+                <div class="flex flex-col md:w-1/2 py-4 px-12 space-y-12">
+                    <h1 class="text-2xl md:text-4xl font-bold text-white text-center">What is Pragmatica</h1>
+                    <ul class="text-lg md:text-xl space-y-6 text-white list-disc">
+                        <li>Professionally curated activities to hone specific communication skills</li>
+                        <li>Chats with unique AI characters to develop conversational skills</li>
+                    </ul>
+                    <a href="https://pragmatica.itch.io/pragmatica-demo" class="py-4 px-12 mx-auto bg-white font-bold text-xl text-center rounded-lg hover:bg-gray-200">Try for Free</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="bg-pragColor px-12">
+        <div class="flex flex-col items-center space-y-6 py-8">
+            <h1 class="text-center text-4xl font-bold text-white">Find the right plan for you!</h1>
+            <h1 class="text-center text-white text-lg">Pragmatica has a variety of tailor-made plans to suit your individual needs!</h1>
+            <div class="flex space-x-4 mt-4 border rounded-lg">
+                <button id="monthly-btn" onclick="setPricing('monthly')" class="px-4 py-2 bg-white text-pragColor font-semibold rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pragColor active:bg-gray-300">
+                    Monthly
+                </button>
+                <button id="yearly-btn" onclick="setPricing('yearly')" class="px-4 py-2 text-white bg-gray-500 font-semibold rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pragColor active:bg-gray-300">
+                    Yearly
+                </button>
+            </div>
+        </div>
+        <div class="flex flex-col md:flex-row justify-around items-center mx-auto space-y-8 md:space-y-0">
+            <div class="flex flex-col items-center bg-white shadow-xl rounded-2xl p-12 space-y-6">
+                <h1 class="text-4xl font-bold">Basic</h1>
+                <h1 class="text-2xl"><span id="basic-price">$50</span> / <span id="basic-duration">month</span></h1>
+                <div>
+                    <ul class="text-md md:text-lg text-left list-disc space-y-2">
+                        <li>PC and iOS support</li>
+                        <li>Hundreds of activities</li>
+                        <li>AI chats with unique characters</li>
+                        <li>Free data dashboard</li>
+                    </ul>
+                </div>
+                <a id="basic-buy-now" href="https://buy.stripe.com/14k3cF9FZb6a5PifZ2" onclick="gtag_report_conversion_monthly()" class="bg-pragColor text-white py-2 px-6 rounded-full hover:bg-gray-500">Buy Now</a>
+            </div>
+            <div class="flex flex-col items-center bg-white shadow-xl rounded-2xl p-12 space-y-6">
+                <h1 class="text-4xl font-bold">Premium</h1>
+                <h1 class="text-2xl"><span id="premium-price">$150</span> / <span id="premium-duration">month</span></h1>
+                <div>
+                    <ul class="text-md md:text-lg text-left list-disc space-y-2">
+                        <p>All features of basic plan +</p>
+                        <li>Virtual reality support</li>
+                        <li>New activity requests</li>
+                        <li>Advanced data analytics</li>
+                    </ul>
+                </div>
+                <a id="premium-buy-now" href="https://buy.stripe.com/9AQ6oR9FZ7TYfpS4gg" onclick="gtag_report_conversion_monthly()" class="bg-pragColor text-white py-2 px-6 rounded-full hover:bg-gray-500">Buy Now</a>
+            </div>
+        </div>
+        <div class="text-md md:text-lg text-center text-white py-8">
+            <h1>Our services may be eligible for reimbursement from insurance or the government.</h1>
+            <h1>Please let us know if this applies to you.</h1>
+        </div>
+    </section>
+    
+    <!-- JavaScript for Pricing Toggle -->
+    <script>
+        function setPricing(plan) {
+            const isYearly = plan === 'yearly';
+    
+            document.getElementById('basic-price').innerText = isYearly ? '$500' : '$50';
+            document.getElementById('premium-price').innerText = isYearly ? '$1500' : '$150';
+    
+            document.getElementById('basic-duration').innerText = isYearly ? 'year' : 'month';
+            document.getElementById('premium-duration').innerText = isYearly ? 'year' : 'month';
+    
+            document.getElementById('basic-buy-now').href = isYearly 
+                ? 'https://buy.stripe.com/bIYdRjbO70rwelOaEJ' 
+                : 'https://buy.stripe.com/14k3cF9FZb6a5PifZ2';
+            document.getElementById('premium-buy-now').href = isYearly 
+                ? 'https://buy.stripe.com/6oE9B38BV6PU0uYbIL' 
+                : 'https://buy.stripe.com/9AQ6oR9FZ7TYfpS4gg';
+    
+            document.getElementById('monthly-btn').classList.toggle('bg-white', !isYearly);
+            document.getElementById('monthly-btn').classList.toggle('text-pragColor', !isYearly);
+            document.getElementById('monthly-btn').classList.toggle('bg-gray-500', isYearly);
+            document.getElementById('monthly-btn').classList.toggle('text-white', isYearly);
+    
+            document.getElementById('yearly-btn').classList.toggle('bg-white', isYearly);
+            document.getElementById('yearly-btn').classList.toggle('text-pragColor', isYearly);
+            document.getElementById('yearly-btn').classList.toggle('bg-gray-500', !isYearly);
+            document.getElementById('yearly-btn').classList.toggle('text-white', !isYearly);
+        }
+    
+        setPricing('monthly');
+    </script>
+
+    <!-- Headset Options -->
+    <section id="headset">
+        <h1 class="bg-gray-800 text-center font-bold text-4xl text-white pt-8">VR options</h1>
+        <div class="flex flex-col md:flex-row mx-auto justify-around p-12 space-y-12 md:space-y-0 bg-gray-800">
+            <div class="flex flex-col bg-white rounded-2xl p-12 space-y-6 md:w-1/3">
+                <div class="text-2xl text-center font-bold">
+                    <h1>I have a VR headset</h1>
+                </div>
+                <div class="text-xl text-center">
+                    <h1>Based on the type and model of your VR headset, the Pragmatica application can be used by your personal device.</h1>
+                </div>
+            </div>
+            <div class="flex flex-col bg-white rounded-2xl p-12 space-y-6 md:w-1/3">
+                <div class="text-2xl text-center font-bold">
+                    <h1>I don't have a VR headset</h1>
+                </div>
+                <div class="text-xl text-center">
+                    <h1>Pragmatica offers various options for loaning or purchasing a VR headset, along with reimbursement and payment installment options.</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-pragColor">
+        <div class="container flex flex-col md:flex-row items-center mx-auto py-8 space-y-6 md:space-y-0">
+            <div class="flex justify-around mx-auto md:-ml-12 my-auto">
+                <div class="flex flex-row space-x-6 text-white">
+                    <a href="" class="text-md hover:text-gray-100">Community</a>
+                    <a href="https://calendly.com/karthikprasad62/pragmatica-meeting" class="text-md hover:text-gray-100">Contact Us</a>
+                    <a href="privacypolicy.html" class="text-md hover:text-gray-100">Privacy Policy</a>
+                </div>
+            </div>
+            <div class="flex items-center mx-auto md:-ml-12 ">
+                <a href="https://www.linkedin.com/company/pragmaticaofficial/">
+                    <img src="resources/linkedin-icon.png" class="px-3 h-10" alt="">
+                </a>
+                <a href="https://www.instagram.com/pragmaticavr/">
+                    <img src="resources/instagram-icon.png" class="px-3 h-8" alt="">
+                </a>
+                <a href="https://www.facebook.com/pragmaticavr">
+                    <img src="resources/facebook-icon.png" class="px-3 h-8" alt="">
+                </a>
+            </div>
+            
+            <div class="flex my-auto">
+                <p class="text-md text-gray-200">pictures from freepik and icons8</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Start of HubSpot Embed Code -->
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js-na1.hs-scripts.com/45763488.js"></script>
+    <!-- End of HubSpot Embed Code -->
+</body>
+</html>
