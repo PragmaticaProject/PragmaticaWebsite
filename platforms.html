@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Pragmatica - VR Speech and Language Therapy Tool</title>
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y923W4FG30"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y923W4FG30');
+</script>
+
+<body>
+    <!-- Navbar -->
+    <nav class="bg-pragColor fixed w-full shadow-xl">
+        <div class="hidden md:flex items-center justify-between mx-auto py-2 px-12">
+            <div class="flex items-center space-x-3">
+                <h1 class="text-center text-white font-bold text-2xl">Pragmatica</h1>
+            </div>
+            <div class="flex items-center md:space-x-6 text-white md:text-lg font-bold">
+                <div>
+                    <a href="index.html" class="hover:text-gray-800 border-r border-white md:pr-6">Home</a>
+                </div>
+                <div>
+                    <a href="kids.html" class="hover:text-gray-800 border-r border-white md:pr-6">Kids</a>
+                </div>
+                <div>
+                    <a href="adults.html" class="hover:text-gray-800 border-r border-white md:pr-6">Adults</a>
+                </div>
+                <div>
+                    <a href="clinicians.html" class="hover:text-gray-800 border-r border-white md:pr-6">Clinicians</a>
+                </div>
+                <div>
+                    <a href="about.html" class="hover:text-gray-800 md:pr-6">About</a>
+                </div>
+            </div>
+            <div class="flex items-center">
+                <a href="https://dashboard-ruby-six.vercel.app/" class="py-2 px-6 text-white bg-pragColor text-xl font-bold rounded-full baseline hover:bg-gray-800">Dashboard</a>
+            </div>
+        </div>
+        <div class="flex md:hidden justify-center text-white font-bold items-center py-4 px-4">
+            <a href="index.html" class="hover:text-gray-800 px-2">Home</a>
+            <a href="kids.html" class="hover:text-gray-800 px-2">Kids</a>
+            <a href="adults.html" class="hover:text-gray-800 px-2">Adults</a>
+            <a href="clinicians.html" class="hover:text-gray-800 px-2">Clinicians</a>
+            <a href="about.html" class="hover:text-gray-800 px-2">About</a>
+        </div>    
+    </nav>
+
+    <section class="py-12 pt-36">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-4xl font-bold">Available Platforms</h1>
+            
+            <!-- Tab Buttons -->
+            <div class="flex space-x-6">
+                <button class="tab-button px-12 py-2 text-lg font-bold transition bg-gray-800 text-white" data-tab="vr" style="margin-left: 24px;">VR</button>
+                <button class="tab-button px-12 py-2 text-lg font-bold transition bg-gray-800 text-white" data-tab="ios">iOS</button>
+                <button class="tab-button px-12 py-2 text-lg font-bold transition bg-gray-800 text-white" data-tab="windows">Windows</button>
+            </div>
+    
+            <!-- Tab Content -->
+            <div class="relative bg-gray-800">
+                <!-- VR Content -->
+                <div class="tab-content flex flex-col md:flex-row p-6 hidden text-white" id="vr">
+                    <div class="flex flex-col w-1/2 justify-around">
+                        <h2 class="text-4xl font-bold">VR</h2>
+                        <p class="text-lg px-24">Experience Pragmatica on a whole new level with Virtual Reality for a more immersive speech therapy experience.</p>
+                        <a href="https://www.meta.com/experiences/pragmatica/6886713338055803/" class="bg-white text-black font-bold rounded-lg py-4 mx-12">Visit Store</a>  
+                    </div>
+                    <div class="flex flex-col w-1/2">
+                        <video class="p-12" controls autoplay muted src="resources/VR demo.mp4"></video>
+                    </div>
+                </div>
+    
+                <!-- iOS Content -->
+                <div class="tab-content flex flex-col md:flex-row p-6 hidden text-white" id="ios">
+                    <div class="flex flex-col w-1/2 justify-around">
+                        <h2 class="text-4xl font-bold">iOS</h2>
+                        <p class="text-lg px-24">Practice your communication skills with Pragmatica on your iPhone and iPad, anytime, anywhere.</p>
+                        <a href="#" class="bg-white text-black font-bold rounded-lg py-4 mx-12">Coming Soon</a>  
+                    </div>
+                    <div class="flex flex-col w-1/2">
+                        <video class="p-12" controls autoplay muted src="resources/iOS Demo.mp4"></video>
+                    </div>
+                </div>
+
+                <!-- Windows Content -->
+                <div class="tab-content flex flex-col md:flex-row p-6 hidden text-white" id="windows">
+                    <div class="flex flex-col w-1/2 justify-around">
+                        <h2 class="text-4xl font-bold">Windows</h2>
+                        <p class="text-lg px-24">Enjoy full access to Pragmatica on your Windows PC for a more comfortable speech therapy experience.</p>
+                        <a href="#" class="bg-white text-black font-bold rounded-lg py-4 mx-12">Download Now</a>    
+                    </div>
+                    <div class="flex flex-col w-1/2">
+                        <video class="p-12" controls autoplay muted src="resources/Windows Demo.mp4"></video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const buttons = document.querySelectorAll(".tab-button");
+        const contents = document.querySelectorAll(".tab-content");
+    
+        buttons.forEach(button => {
+            button.addEventListener("click", function () {
+                const tab = this.getAttribute("data-tab");
+                contents.forEach(content => content.classList.add("hidden"));
+                document.getElementById(tab).classList.remove("hidden");
+            });
+        });
+    
+        buttons[0].click();
+    });
+    </script>
+
+    <!-- Footer -->
+    <footer class="bg-pragColor">
+        <div class="container flex flex-col md:flex-row items-center mx-auto py-8 space-y-6 md:space-y-0">
+            <div class="flex justify-around mx-auto md:-ml-12 my-auto">
+                <div class="flex flex-row space-x-6 text-white">
+                    <a href="" class="text-md hover:text-gray-100">Community</a>
+                    <a href="https://calendly.com/karthikprasad62/pragmatica-meeting" class="text-md hover:text-gray-100">Contact Us</a>
+                    <a href="privacypolicy.html" class="text-md hover:text-gray-100">Privacy Policy</a>
+                </div>
+            </div>
+            <div class="flex items-center mx-auto md:-ml-12 ">
+                <a href="https://www.linkedin.com/company/pragmaticaofficial/">
+                    <img src="resources/linkedin-icon.png" class="px-3 h-10" alt="">
+                </a>
+                <a href="https://www.instagram.com/pragmaticavr/">
+                    <img src="resources/instagram-icon.png" class="px-3 h-8" alt="">
+                </a>
+                <a href="https://www.facebook.com/pragmaticavr">
+                    <img src="resources/facebook-icon.png" class="px-3 h-8" alt="">
+                </a>
+            </div>
+            
+            <div class="flex my-auto">
+                <p class="text-md text-gray-200">pictures from freepik and icons8</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Start of HubSpot Embed Code -->
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js-na1.hs-scripts.com/45763488.js"></script>
+    <!-- End of HubSpot Embed Code -->
+</body>
+</html>
