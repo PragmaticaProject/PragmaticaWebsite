@@ -29,31 +29,148 @@
                 <div>
                     <a href="index.html" class="hover:text-gray-800 border-r border-white md:pr-6">Home</a>
                 </div>
-                <div>
-                    <a href="kids.html" class="hover:text-gray-800 border-r border-white md:pr-6">Kids</a>
+                <div class="relative group">
+                    <button class="flex items-center hover:text-gray-800 border-r border-white md:pr-6">
+                        Kids
+                    </button>
+                    <div class="absolute left-0 hidden pt-2 group-hover:block z-10">
+                        <div class="bg-white text-gray-800 shadow-lg rounded-md py-2 w-48">
+                            <a href="kids.html" class="block px-4 py-2 hover:bg-gray-200">For Kids</a>
+                            <a href="platforms.html" class="block px-4 py-2 hover:bg-gray-200">Platforms</a>
+                            <a href="kids.html#pricing" class="block px-4 py-2 hover:bg-gray-200">Pricing</a>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <a href="adults.html" class="hover:text-gray-800 border-r border-white md:pr-6">Adults</a>
+                <div class="relative group">
+                    <button class="flex items-center hover:text-gray-800 border-r border-white md:pr-6">
+                        Adults
+                    </button>
+                    <div class="absolute left-0 hidden pt-2 group-hover:block z-10">
+                        <div class="bg-white text-gray-800 shadow-lg rounded-md py-2 w-48">
+                            <a href="adults.html" class="block px-4 py-2 hover:bg-gray-200">For Adults</a>
+                            <a href="platforms.html" class="block px-4 py-2 hover:bg-gray-200">Platforms</a>
+                            <a href="adults.html#pricing" class="block px-4 py-2 hover:bg-gray-200">Pricing</a>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <a href="clinicians.html" class="hover:text-gray-800 border-r border-white md:pr-6">Clinicians</a>
+                <div class="relative group">
+                    <button class="flex items-center hover:text-gray-800 border-r border-white md:pr-6">
+                        Clinicians
+                    </button>
+                    <div class="absolute left-0 hidden pt-2 group-hover:block z-10">
+                        <div class="bg-white text-gray-800 shadow-lg rounded-md py-2 w-48">
+                            <a href="clinicians.html" class="block px-4 py-2 hover:bg-gray-200">Clinic Use</a>
+                            <a href="clinicians.html" class="block px-4 py-2 hover:bg-gray-200">At-Home Use</a>
+                            <a href="clinicians.html#pricing" class="block px-4 py-2 hover:bg-gray-200">Enterprise Pricing</a>
+                            <a href="research.html" class="block px-4 py-2 hover:bg-gray-200">Research</a>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <a href="about.html" class="hover:text-gray-800 md:pr-6">About</a>
+                <div class="relative group">
+                    <button class="flex items-center hover:text-gray-800 md:pr-6">
+                        About
+                    </button>
+                    <div class="absolute left-0 hidden pt-2 group-hover:block z-10">
+                        <div class="bg-white text-gray-800 shadow-lg rounded-md py-2 w-48">
+                            <a href="about.html" class="block px-4 py-2 hover:bg-gray-200">Contact Us</a>
+                            <a href="about.html#team" class="block px-4 py-2 hover:bg-gray-200">Our Team</a>
+                            <a href="research.html" class="block px-4 py-2 hover:bg-gray-200">Research</a>
+                            <a href="index.html#testimonials" class="block px-4 py-2 hover:bg-gray-200">Testimonials</a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="flex items-center">
                 <a href="https://dashboard-ruby-six.vercel.app/" class="py-2 px-6 text-white bg-pragColor text-xl font-bold rounded-full baseline hover:bg-gray-800">Dashboard</a>
             </div>
         </div>
-        <div class="flex md:hidden justify-center text-white font-bold items-center py-4 px-4">
-            <a href="index.html" class="hover:text-gray-800 px-2">Home</a>
-            <a href="kids.html" class="hover:text-gray-800 px-2">Kids</a>
-            <a href="adults.html" class="hover:text-gray-800 px-2">Adults</a>
-            <a href="clinicians.html" class="hover:text-gray-800 px-2">Clinicians</a>
-            <a href="about.html" class="hover:text-gray-800 px-2">About</a>
-        </div>    
+        
+        <!-- Mobile navbar - will need touch events rather than hover -->
+        <div class="md:hidden">
+            <div class="flex justify-between items-center py-3 px-4">
+                <h1 class="text-center text-white font-bold text-xl">Pragmatica</h1>
+                <button id="mobile-menu-button" class="text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <div id="mobile-menu" class="hidden bg-pragColor pb-4">
+                <a href="index.html" class="block text-white font-bold py-2 px-4 hover:bg-gray-800">Home</a>
+                
+                <div class="mobile-dropdown">
+                    <button id="kids-dropdown-btn" class="w-full flex justify-between items-center text-white font-bold py-2 px-4 hover:bg-gray-800">
+                        Kids
+                    </button>
+                    <div id="kids-dropdown-content" class="hidden bg-gray-700 px-4 py-2">
+                        <a href="kids.html" class="block px-4 py-2 hover:bg-gray-200">For Kids</a>
+                        <a href="platforms.html" class="block px-4 py-2 hover:bg-gray-200">Platforms</a>
+                        <a href="kids.html#pricing" class="block px-4 py-2 hover:bg-gray-200">Pricing</a>
+                    </div>
+                </div>
+                <div class="mobile-dropdown">
+                    <button id="adults-dropdown-btn" class="w-full flex justify-between items-center text-white font-bold py-2 px-4 hover:bg-gray-800">
+                        Adults
+                    </button>
+                    <div id="adults-dropdown-content" class="hidden bg-gray-700 px-4 py-2">
+                        <a href="adults.html" class="block px-4 py-2 hover:bg-gray-200">For Adults</a>
+                        <a href="platforms.html" class="block px-4 py-2 hover:bg-gray-200">Platforms</a>
+                        <a href="adults.html#pricing" class="block px-4 py-2 hover:bg-gray-200">Pricing</a>
+                    </div>
+                </div>
+                <div class="mobile-dropdown">
+                    <button id="clinicians-dropdown-btn" class="w-full flex justify-between items-center text-white font-bold py-2 px-4 hover:bg-gray-800">
+                        Clinicians
+                    </button>
+                    <div id="clinicians-dropdown-content" class="hidden bg-gray-700 px-4 py-2">
+                        <a href="about.html" class="block px-4 py-2 hover:bg-gray-200">Contact Us</a>
+                        <a href="about.html#team" class="block px-4 py-2 hover:bg-gray-200">Our Team</a>
+                        <a href="research.html" class="block px-4 py-2 hover:bg-gray-200">Research</a>
+                        <a href="index.html#testimonials" class="block px-4 py-2 hover:bg-gray-200">Testimonials</a>
+                    </div>
+                </div>
+                <div class="mobile-dropdown">
+                    <button id="about-dropdown-btn" class="w-full flex justify-between items-center text-white font-bold py-2 px-4 hover:bg-gray-800">
+                        About
+                    </button>
+                    <div id="about-dropdown-content" class="hidden bg-gray-700 px-4 py-2">
+                        <a href="about.html" class="block text-white py-2 hover:text-gray-300">About Us</a>
+                        <a href="team.html" class="block text-white py-2 hover:text-gray-300">Our Team</a>
+                        <a href="mission.html" class="block text-white py-2 hover:text-gray-300">Our Mission</a>
+                        <a href="contact.html" class="block text-white py-2 hover:text-gray-300">Contact</a>
+                    </div>
+                </div>
+                <a href="https://dashboard-ruby-six.vercel.app/" class="block text-white font-bold py-2 px-4 hover:bg-gray-800">Dashboard</a>
+            </div>
+        </div>
     </nav>
+    
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Mobile dropdown functionality
+            const dropdownBtns = [
+                { btn: document.getElementById('kids-dropdown-btn'), content: document.getElementById('kids-dropdown-content') },
+                { btn: document.getElementById('adults-dropdown-btn'), content: document.getElementById('adults-dropdown-content') },
+                { btn: document.getElementById('clinicians-dropdown-btn'), content: document.getElementById('clinicians-dropdown-content') },
+                { btn: document.getElementById('about-dropdown-btn'), content: document.getElementById('about-dropdown-content') }
+            ];
+            
+            dropdownBtns.forEach(function(item) {
+                item.btn.addEventListener('click', function() {
+                    item.content.classList.toggle('hidden');
+                });
+            });
+        });
+    </script>
 
     <!-- Hero Section -->
     <section id="hero">
@@ -67,7 +184,7 @@
             <div class="text-center">
                 <a href="https://pragmatica.itch.io/pragmatica-demo" class="py-4 px-6 bg-black text-white font-bold text-xl rounded-lg hover:bg-gray-500">Try for Free</a>
             </div>
-            <div class="flex justify-center md:px-24 w-full mt-8 md:mt-12 drop-shadow-2xl rounded-lg overflow-hidden max-w-3xl">
+            <div class="flex justify-center md:px-24 w-full mt-8 md:mt-12 drop-shadow-2xl rounded-lg overflow-hidden">
                 <video class="w-full h-auto rounded-lg" controls autoplay muted src="resources/DemoVideo.mp4"></video>
             </div>
         </div>
@@ -76,7 +193,7 @@
                 Book a free consultation to find out how we can help you!
             </h2>
             <div class="text-center py-8">
-                <a href="https://calendly.com/karthikprasad62/pragmatica-meeting" class="p-4 px-6 bg-white font-bold text-xl rounded-full baseline hover:bg-gray-200">Book a Call</a>
+                <a href="https://calendly.com/thomas-pragmatica/30min" class="p-4 px-6 bg-white font-bold text-xl rounded-full baseline hover:bg-gray-200">Book a Call</a>
             </div>
         </div>
     </section>
@@ -96,37 +213,40 @@
                 <div class="flex flex-col space-y-6 py-6 px-12 items-center bg-white rounded-2xl w-full">
                     <h1 class="text-2xl font-bold">iOS</h1>
                     <img src="resources/appleIcon.png" alt="" class="h-12">
-                    <a href="https://www.meta.com/experiences/pragmatica/6886713338055803/">
+                    <a href="#">
                         <h1 class="text-xl font-bold"><u>Store Page</u></h1>
                     </a>
                 </div>
                 <div class="flex flex-col space-y-6 py-6 px-12 items-center bg-white rounded-2xl w-full">
                     <h1 class="text-2xl font-bold">Windows</h1>
                     <img src="resources/windowsIcon.png" alt="" class="h-12">
-                    <a href="https://www.meta.com/experiences/pragmatica/6886713338055803/">
+                    <a href="https://d291cxxe3xwa1w.cloudfront.net/PragmaticaSetup.exe">
                         <h1 class="text-xl font-bold"><u>Store Page</u></h1>
                     </a>
                 </div>
+            </div>
+            <div class="text-center py-8">
+                <a href="platforms.html" class="p-4 px-6 bg-white font-bold text-xl rounded-full baseline hover:bg-gray-200">Learn More</a>
             </div>
         </div>
     </section>
     
 
     <!-- What is Pragmatica -->
-    <section class="bg-gray-800">
+    <section>
         <div class="flex flex-col items-center mx-auto px-12 py-12 space-y-12">
             <div class="flex flex-col md:flex-row items-center mx-auto space-x-0 md:space-x-24 space-y-12 md:space-y-0">
                 <div class="flex flex-col md:w-1/2 py-8 px-4 space-y-12">
-                    <h1 class="text-2xl md:text-4xl font-bold text-white text-center">What is Pragmatica</h1>
-                    <ul class="text-lg md:text-xl space-y-6 text-white justify-center text-center">
+                    <h1 class="text-2xl md:text-4xl font-bold text-center">What is Pragmatica?</h1>
+                    <ul class="text-lg md:text-xl space-y-6 justify-center text-center">
                         <li>Practice your communication skills anytime and anywhere.</li>
                         <li><b>Professionally curated activities</b> and chats with <b>unique AI characters</b>.</li>
                         <li><b>High intensity</b> practice and cutting edge data analytics</li>
                     </ul>
-                    <a href="https://pragmatica.itch.io/pragmatica-demo" class="py-4 px-12 w-48 mx-auto bg-white font-bold text-xl text-center rounded-lg hover:bg-gray-200">Try for Free</a>
+                    <a href="https://pragmatica.itch.io/pragmatica-demo" class="py-4 px-12 mx-auto bg-pragColor text-white font-bold text-xl text-center rounded-full hover:bg-gray-200">Try for Free</a>
                 </div>
                 <div class="flex flex-col md:w-1/3 py-8 px-4 space-y-6">
-                    <div class="flex mx-auto items-center">
+                    <div class="flex mx-auto items-center border-black border-2">
                         <img src="resources/SBipad.jpg" alt="child using VR">
                     </div>
                 </div>
@@ -136,7 +256,7 @@
 
     <!-- Target Audience -->
     <section class="bg-gray-800">
-        <div class="flex flex-col md:flex-row mx-auto space-y-12 md:space-y-0 py-12 my-12">
+        <div class="flex flex-col md:flex-row mx-auto space-y-12 md:space-y-0 py-12">
             <div class="flex flex-col mx-auto items-center space-y-8 px-12 py-4 bg-white rounded-2xl">
                 <h1 class="text-xl">For Clinicians</h1>
                 <img src="resources/clinicianIcon.png" alt="clinician using dashboard" class="h-16">
